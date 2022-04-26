@@ -8,6 +8,7 @@ class GoogleAdsCampaignPerformanceReport extends \SmartContact\LaravelGoogleAds\
 {
     protected $columns = [
         'campaign.name',
+        'campaign.status',
         'metrics.cost_micros',
         'metrics.clicks',
         'metrics.impressions',
@@ -17,6 +18,7 @@ class GoogleAdsCampaignPerformanceReport extends \SmartContact\LaravelGoogleAds\
         'metrics.clicks',
         'metrics.all_conversions',
         'metrics.conversions',
+        'segments.device',
         'segments.ad_network_type'
     ];
 

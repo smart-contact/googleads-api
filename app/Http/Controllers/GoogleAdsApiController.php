@@ -16,7 +16,6 @@ class GoogleAdsApiController extends Controller
 
         return ($googleAdsApi)
             ->setDuring($during)
-            ->where('metrics.impressions', '>', 0)
             ->searchStream();
     }
 }
