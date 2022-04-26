@@ -1,5 +1,6 @@
 id: 30408
 name: googleads-api
+separate-vendor: true
 environments:
   production:
     memory: 1024
