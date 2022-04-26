@@ -1,0 +1,30 @@
+name: Project Deploy To Production
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+
+    container:
+      image: kirschbaumdevelopment/laravel-test-runner:7.4
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Install composer dependencies
+        run: |
+          composer install --no-scripts
+
+#      - name: Run Testsuite
+#        run: vendor/bin/phpunit tests/
+
+      - name: Deploy
+        run: |
+          vendor/bin/vapor deploy production
+        env:
+          VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}

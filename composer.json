@@ -11,7 +11,9 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "smart-contact/laravel-google-ads": "^1.0"
+        "smart-contact/laravel-google-ads": "^1.0",
+        "laravel/vapor-cli": "^1.36",
+        "laravel/vapor-core": "^2.21"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
