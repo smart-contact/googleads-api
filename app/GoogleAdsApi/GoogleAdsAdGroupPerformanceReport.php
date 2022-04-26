@@ -9,6 +9,7 @@ class GoogleAdsAdGroupPerformanceReport extends \SmartContact\LaravelGoogleAds\G
     protected $columns = [
         'campaign.name',
         'ad_group.name',
+        'ad_group.status',
         'metrics.cost_micros',
         'metrics.clicks',
         'metrics.impressions',
