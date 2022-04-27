@@ -14,7 +14,9 @@ class GoogleAdsApiController extends Controller
             $during = [request()->route('date'), request()->route('date')];
         }
 
+        $columns = request()->has('columns') ? request()->columns : [];
         return ($googleAdsApi)
+            ->select($columns)
             ->setDuring($during)
             ->searchStream();
     }
