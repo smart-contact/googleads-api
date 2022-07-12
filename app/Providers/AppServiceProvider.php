@@ -6,6 +6,7 @@ namespace App\Providers;
 use App\GoogleAdsApi\GoogleAdsAdGroupPerformanceReport;
 use App\GoogleAdsApi\GoogleAdsApiPerformanceReportInterface;
 use App\GoogleAdsApi\GoogleAdsCampaignPerformanceReport;
+use App\GoogleAdsApi\GoogleAdsClickViewPerformanceReport;
 use App\GoogleAdsApi\GoogleAdsKeywordPerformanceReport;
 use App\GoogleAdsApi\GoogleAdsLandingPageViewPerformanceReport;
 use App\GoogleAdsApi\GoogleAdsPlacementViewPerformanceReport;
@@ -37,7 +38,8 @@ class AppServiceProvider extends ServiceProvider
               case 'campaign': return new GoogleAdsCampaignPerformanceReport(request()->account); break;
               case 'adgroup': return new GoogleAdsAdGroupPerformanceReport(request()->account); break;
               case 'keyword_view': return new GoogleAdsKeywordPerformanceReport(request()->account); break;
-              case 'landing-page-view': return new GoogleAdsLandingPageViewPerformanceReport(request()->account); break;
+              case 'landing-page-view': return new GoogleAdsLandingPageViewPerfaormanceReport(request()->account); break;
+              case 'click-view': return new GoogleAdsClickViewPerformanceReport(request()->account); break;
           }
        });
     }

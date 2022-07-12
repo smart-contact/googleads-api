@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use \App\Http\Controllers\GoogleAdsApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/{report}/{date?}', \App\Http\Controllers\GoogleAdsApiController::class);
+Route::post('/{report}/{date?}', GoogleAdsApiController::class);

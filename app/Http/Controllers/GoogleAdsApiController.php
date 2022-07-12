@@ -18,6 +18,7 @@ class GoogleAdsApiController extends Controller
         return ($googleAdsApi)
             ->select($columns)
             ->setDuring($during)
+//            ->where(request()->column, request()->operator, request()->value)
             ->searchStream();
     }
 }
