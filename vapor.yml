@@ -5,18 +5,17 @@ environments:
         scheduler: false
         queues: false
         memory: 512
-        cli-memory: 1024
-        runtime: 'php-8.0:al2'
-        timeout: 800
+        cli-memory: 512
+        runtime: 'php-8.2:al2'
         build:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
             - 'php artisan event:cache'
-    test: # versione corrente e corretta
+    staging:
         scheduler: false
         queues: false
-        memory: 512
-        cli-memory: 1024
-        runtime: php-8.0:al2
+        memory: 128
+        cli-memory: 128
+        runtime: 'php-8.0:al2'
         timeout: 800
         build:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
