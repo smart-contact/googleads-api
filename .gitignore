@@ -16,3 +16,5 @@ yarn-error.log
 .env.production
 .env.staging
 .env.test
+.env.production-new
+.vapor

@@ -1,7 +1,7 @@
 id: 30408
 name: googleads-api
 environments:
-    production:
+    production-new:
         scheduler: false
         queues: false
         memory: 512
@@ -16,7 +16,7 @@ environments:
         queues: false
         memory: 128
         cli-memory: 128
-        runtime: 'php-8.0:al2'
+        runtime: 'php-8.2:al2'
         timeout: 800
         build:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
