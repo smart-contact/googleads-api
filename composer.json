@@ -14,7 +14,7 @@
         "laravel/framework": "^8.83",
         "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.8",
-        "smart-contact/laravel-google-ads": "^1.1",
+        "smart-contact/laravel-google-ads": "^1.2",
         "laravel/vapor-cli": "^1.60",
         "laravel/vapor-core": "^2.33"
     },
